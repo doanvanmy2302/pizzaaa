@@ -1,0 +1,35 @@
+.container {
+   padding: 5% 10%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    
+  }
+  .left{
+    width:40%;
+  }
+.imageMap{
+    width: 60%;
+  height: 40rem;
+  position: relative;
+}
+.title{
+    font-weight: 500;
+    margin: 10px 0;
+}
+.text{
+    padding: 10px;
+}
+.address{
+    display: flex;
+    padding-left: 10%;
+}
+.number{
+    padding:10px 20px;
+    margin: 10px 0px;
+    border-radius: 50%;
+    background-color:#d1411e;
+    width: 9%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}

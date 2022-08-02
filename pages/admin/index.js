@@ -6,7 +6,7 @@ export default function index({orders, products}) {
   
   const handleDelete = async(id)=>{
     try {
-      const res = await axios.delete("http://doanvanmy-pizzaaa.vercel.app/api/products/" + id)
+      const res = await axios.delete(`${process.env.URL}/api/products/` + id)
    
     } catch (err){
       console.log(err);
@@ -72,8 +72,8 @@ export default function index({orders, products}) {
 }
 export const getServerSideProps = async()=>{
 
-  const productRes = await axios.get("http://doanvanmy-pizzaaa.vercel.app/api/products");
-   const orderRes = await axios.get("http://doanvanmy-pizzaaa.vercel.app/api/orders");
+  const productRes = await axios.get(`${process.env.URL}/api/products`);
+   const orderRes = await axios.get(`${process.env.URL}/api/orders`);
   return {
     props:{
        orders: orderRes.data,
